@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Form</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Additional CSS styles */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">User Input Form</h2>
+            <form id="userForm" onsubmit="return validateUser()">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" required>
+                    <div id="emailError" class="error-message"></div> <!-- Error message for email -->
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="form-control" required>
+                    <div id="passwordError" class="error-message"></div> <!-- Error message for password -->
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" class="form-control" required>
+                    <div id="ageError" class="error-message"></div> <!-- Error message for age -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+
+            <div id="boxesContainer" class="mt-4"></div> <!-- Container for boxes -->
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS CDN (optional if needed) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // JavaScript code remains unchanged
+    function validateUser() {
+        // Reset error messages
+        document.getElementById("emailError").textContent = "";
+        document.getElementById("passwordError").textContent = "";
+        document.getElementById("ageError").textContent = "";
+
+        // Rest of the JavaScript code...
+        // (Same as before)
+
+        return false; // Prevent form submission
+    }
+</script>
+
+</body>
+</html>

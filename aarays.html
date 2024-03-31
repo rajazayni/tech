@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fruits List</h1>
+    <ol id="fruitslist"></ol>
+    <script>
+    const fruits = ['Apple', 'Banana', 'Mango', 'Grape', 'Kiwi'];
+    console.log(fruits);
+    const fruitslist = document.getElementById("fruitslist");
+
+
+
+
+    //remove the last fruit
+    var removedFruit = fruits.pop();
+
+
+
+    fruits.push('orange','kiwi','banana');
+    fruits.shift();
+    fruits.unshift('Apple', 'Vagetables');
+    fruits.splice(1,2);
+
+    
+
+    for (var i = 0; i < fruits.length; i++) {
+        var listitem = document.createElement("li");
+        listitem.textContent = fruits[i];
+        fruitslist.appendChild(listitem);
+    }
+</script>
+</body>
+</html>

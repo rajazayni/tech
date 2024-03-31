@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Day 1</title>
+</head>
+
+<body>
+    <script>var myName = "Zayn";
+        var myAge = "24";
+        
+        //print student info in console
+        var studentInfo = {
+            name: "Ayan",
+            grade: 87,
+            isPassing: true
+        };
+        
+        //printing third item
+        var shoppingList = ["Apples", "Bananas", "Milk", "Bread", "Eggs"];
+        
+        //Area Of Rectangel
+        var length = 10; 
+        var width = 5; 
+        var area = length * width;
+        
+        // Question no 4
+        const TAX_RATE = 0.1;
+        var purchaseAmount = 100; 
+        var taxAmount = purchaseAmount * TAX_RATE;
+        
+         //Qusetion 5 sentence
+         var set1 = "My name is "
+         var set2 = " Zayn. I am from Rawalpindi,Punjab"
+         
+        
+         //Qno6 arthamatic opeartions
+         var num1 = 5;
+         var num2 = 10;
+        
+        
+         //Qno7 senntence camparsion
+         var set1 = "My name is "
+         var set2 = " Humayun. I am from Rawalakot AJK"
+         var id1 = "4";
+         var id2 = 4;
+         console.log("QNo7")
+         console.log(set1 == set2);
+         console.log(set1 === set2);
+         console.log(id1 == id2);
+         console.log(id1 === id2);
+         console.log(set1 != set2);
+         console.log(set1 !== set2);
+         console.log(id1 != id2);
+         console.log(id1 !== id2);
+        
+         //Qno8 Boook array and delte
+         let book = {
+             title: "Javascript",
+             pages: 218
+         };
+         console.log("QNo8");
+         console.log(book);
+         delete book.pages;
+         console.log(book); // Output the book object after deletion
+        
+        
+         //Qn9 average of three numbers
+         var a = 10
+         var b = 15
+         var c = 45
+         console.log("QNo10")
+         console.log(a + "+" + b + "+" + c + "/" + "3")
+         var sum = a + b + c;
+         console.log("average=", sum / 3);t
+        
+        
+        
+        
+        console.log("Name: " + myName);
+        console.log("Age: " + myAge);
+        
+        console.log(studentInfo);
+        
+        console.log("Third item from the shopping list:", shoppingList[2]);
+        
+        console.log("The area of the rectangle is:", area, "square units.");
+        
+        console.log("The tax amount for a purchase of $" + purchaseAmount + " is: $" + taxAmount);
+        
+        console.log("QNo5")
+         console.log(set1 + set2);
+        
+         console.log("QNo6");
+         console.log(
+             num1 + "+" + num2 + "=" + (num1 + num2),
+             num2 + "-" + num1 + "=" + (num2 - num1),
+             num1 + "x" + num2 + "=" + (num2 * num1),
+             num2 + "/" + num1 + "=" + (num2 / num1)
+         );
+         </script>
+
+</body>
+
+</html>

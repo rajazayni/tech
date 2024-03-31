@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+        .error {
+            color: rgb(22, 6, 68);
+            font-weight: bold;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #720404;
+            margin: 5px;
+            background-color: rgb(12, 12, 12);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .form {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #c4aeae;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2{
+        color: rgb(7, 7, 7);
+    }
+    #submit {
+        display: block;
+        width: 50%;
+        padding: 10px;
+        font-size: 16px;
+        background: #1e5b5f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="form">
+            <h2>Login Form</h2>
+
+            <form action="">
+                Email:<br>
+                <input type="email" id="email" name="email"><br>
+                <span id="emailError" class="error"></span>
+
+                <br>
+                Password:<br>
+                <input type="password" id="password" name="password"><br>
+                <span id="passwordError" class="error"></span>
+                <br>
+                Age:<br>
+                <input type="number" id="age" name="age"><br>
+                <span id="ageError" class="error"></span>
+                <br><br>
+                <input type="button" id="submit" value="Submit">
+                <span id="epr" class="error"></span>
+            </form>
+        </div>
+    </center>
+
+
+    <div id="boxes" class="box-container"></div>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function () {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var age = document.getElementById("age").value;
+
+            if (email == "") {
+                document.getElementById("emailError").innerHTML = "Email is empty";
+                
+            
+            }
+            else{
+                document.getElementById("emailError").innerHTML = "";
+                return false;
+            }
+                
+            
+            
+            if (password == "") {
+                document.getElementById("passwordError").innerHTML = "Password is empty";
+            
+            }
+            else{
+                document.getElementById("passwordError").innerHTML = "";
+                return false;
+            }
+            
+            if (age == "") {
+                document.getElementById("ageError").innerHTML = "Enter age to continue";
+                
+            }
+            else{
+                document.getElementById("passwordError").innerHTML = "";
+                return false;
+            }
+           
+
+
+            var validEmail = "owais@1.com";
+            var validPassword = "123";
+
+            if (email == validEmail && password == validPassword) {
+                document.getElementById("passwordError").innerHTML = "Email and password are valid";
+            } else {
+                document.getElementById("passwordError").innerHTML = "Email and password not matched";
+                return false;
+            }
+
+            var boxes = document.getElementById("boxes");
+            boxes.innerHTML = "";
+            for (var i = 0; i < age; i++) {
+                boxes.innerHTML += "<div class='box'></div>";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

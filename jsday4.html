@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+
+<h2>Creating Arrays</h2>
+<script>
+    var creatingArrays = [1, 2, 3, "Apple", "Banana", true];
+    console.log("Creating Arrays:", creatingArrays);
+</script>
+
+<h2>Accessing Array Elements</h2>
+<script>
+    var accessingElements = ["Apple", "Banana", "Orange"];
+    console.log("Accessing Array Elements:", accessingElements[0], accessingElements[1], accessingElements[2]);
+</script>
+
+<h2>Adding and Removing Items from an Array</h2>
+<script>
+    var fruits = ["Apple", "Banana"];
+    
+    // Using push()
+    fruits.push("Orange");
+    console.log("After push:", fruits);
+
+    // Using pop()
+    var removedFruit = fruits.pop();
+    console.log("Removed Fruit:", removedFruit);
+    console.log("After pop:", fruits);
+
+    // Using unshift()
+    fruits.unshift("Mango");
+    console.log("After unshift:", fruits);
+
+    // Using shift()
+    var removedFirstFruit = fruits.shift();
+    console.log("Removed First Fruit:", removedFirstFruit);
+    console.log("After shift:", fruits);
+</script>
+
+</body>
+</html>
